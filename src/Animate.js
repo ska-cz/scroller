@@ -22,7 +22,9 @@
  * rendering. This eases a lot of cases where it might be pretty complex to break down a state
  * based on the pure time difference.
  */
-(function(global) {
+
+define('Animate', [], function() {
+
 	var time = Date.now || function() {
 		return +new Date();
 	};
@@ -31,13 +33,9 @@
 	var running = {};
 	var counter = 1;
 
-	// Create namespaces
-	if (!global.core) {
-		global.core = { effect : {} };
+	var global = window;
+	var core = { effect: {} };
 
-	} else if (!core.effect) {
-		core.effect = {};
-	}
 
 	core.effect.Animate = {
 
@@ -235,5 +233,7 @@
 			return id;
 		}
 	};
-})(this);
+
+	return core.effect.Animate;
+});
 
