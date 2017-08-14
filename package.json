@@ -1,0 +1,10 @@
+{
+  "name": "zyngascroller-amd",
+  "version": "1.2.4",
+  "description": "",
+  "main": "src/Scroller.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ska-cz/scroller.git"
+  }
+}
